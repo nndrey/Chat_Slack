@@ -1,0 +1,35 @@
+name: Deploy to Layero
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: make install
+
+      - name: Run Linters
+        run: make lint
+
+      - name: Build project
+        run: make build
+
+      - name: Deploy to Layero
+        env:
+          LAYERO_TOKEN: ${{ secrets.LAYERO_TOKEN }}
+        run: |
+          echo "✅ Сборка завершена успешно. Начинаю деплой."
+          make layero-deploy
