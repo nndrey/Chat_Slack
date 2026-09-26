@@ -23,3 +23,6 @@ lint:
 
 lint-fix:
 	npm run --silent lint:fix
+
+layero-deploy:build 
+	npx layero@latest deploy --prod --yes

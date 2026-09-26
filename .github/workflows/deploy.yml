@@ -4,7 +4,6 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -28,10 +27,9 @@ jobs:
       - name: Build project
         run: make build
 
-      # Шаг деплоя теперь вызывает npx напрямую
       - name: Deploy to Layero
         env:
           LAYERO_TOKEN: ${{ secrets.LAYERO_TOKEN }}
         run: |
           echo "✅ Сборка завершена успешно. Начинаю деплой."
-          npx layero@latest deploy --yes --token=${{ secrets.LAYERO_TOKEN }}
+          make layero-deploy
