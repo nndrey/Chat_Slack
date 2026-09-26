@@ -1,5 +1,8 @@
 [![Deploy to Layero](https://github.com/nndrey/Chat_Slack/actions/workflows/deploy.yml/badge.svg)](https://github.com/nndrey/Chat_Slack/actions/workflows/deploy.yml)
+---
+[![hexlet-check](https://github.com/nndrey/Chat_Slack/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/nndrey/Chat_Slack/actions/workflows/hexlet-check.yml)
 
+---
 
 # 💬 Chat-Slack: Real-time Messaging Application
 
