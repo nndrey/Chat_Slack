@@ -1,0 +1,14 @@
+node_modules/
+*.yml
+*.yaml
+*.json
+*.jsonc
+*.css
+*.md
+npm-cache/
+vendor/
+dist/
+build/
+coverage/
+.venv/
+__snapshots__/

@@ -1,6 +1,12 @@
+import debug from "debug";
+
 import App from "./components/App";
 
-const init = async () => {
+const logSocket = debug("chat:socket");
+
+const init = async (socket) => {
+
+  socket.on("newMessage", logSocket);
 
   return (
     <App />
