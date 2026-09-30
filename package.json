@@ -16,9 +16,14 @@
   },
   "dependencies": {
     "@hexlet/chat-server": "^2.0.4",
+    "@mantine/core": "^9.6.3",
+    "@mantine/form": "^9.6.3",
+    "@mantine/hooks": "^9.6.3",
+    "@mantine/notifications": "^9.6.3",
     "@milahu/debug-esm": "^4.3.5",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4",
     "socket.io-client": "^4.8.4"
   },
   "devDependencies": {
